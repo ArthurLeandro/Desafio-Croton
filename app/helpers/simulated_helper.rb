@@ -1,0 +1,2 @@
+module SimulatedHelper
+end

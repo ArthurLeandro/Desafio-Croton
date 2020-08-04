@@ -1,0 +1,32 @@
+<div class="simulated-container">
+  <div class="card-content ">
+    <div class="card card-basic">
+      <div class="card-body">
+        <h6 class="card-title h-title"><%=@simulated.question%></h6>
+      <div class="divider"></div>
+      <%# FormBody %>
+      <%= form_with(model: @simulated, local:true, class:"card-text-content radio") do |sim| %>
+        <%= tag.div class: 'form-check form-check-inline card-text-content bg-success text-white' do %>
+          <%#= radio_button_tag(:correct_value, "0", class:"form-check-input")%>
+          <%= label_tag(:alternatives_0, @alternative1, class:"form-check-label")%>
+        <% end %>
+        <%= tag.div class: 'form-check form-check-inline card-text-content bg-danger text-white' do %>
+          <%#= radio_button_tag(:correct_value, "1", class:"form-check-input")%>
+          <%= label_tag(:alternatives_1, @alternative2, class:"form-check-label")%>
+        <% end %>
+        <%= tag.div class: 'form-check form-check-inline card-text-content bg-danger text-white' do %>
+          <%#= radio_button_tag(:correct_value, "2", class:"form-check-input")%>
+          <%= label_tag(:alternatives_2, @alternative3, class:"form-check-label")%>
+        <% end %>
+        <%= tag.div class: 'form-check form-check-inline card-text-content bg-danger text-white' do %>
+          <%#= radio_button_tag(:correct_value, "3", class:"form-check-input")%>
+          <%= label_tag(:alternatives_3, @alternative4, class:"form-check-label")%>
+        <% end %>
+      <% end %>
+      <div class="button-basic"></div>
+        <a href="/simulated" class="btn btn-primary">Voltar aos simulados</a>
+      </div>              
+      <%# FormBodyEnd %>
+    </div>
+  </div>
+</div>

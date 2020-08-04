@@ -1,0 +1,35 @@
+// Place all the styles related to the undergraduates controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+// Color Pallet
+$lightBlue-color: rgb(111, 181, 235);
+$whiteBlue-color: rgb(165, 180, 209);
+$grayBlue-color:  rgb(172, 176, 226);
+
+.background-container{
+  position: relative;
+  padding: 0;
+}
+.form-container{
+  border-radius: 0.4em;
+  position: absolute;
+  top: 20%;
+  right: 40%;
+  padding: 0.8em;
+  text-align: center;
+  background-color: $grayBlue-color;
+}
+.background-image{
+  width: 100%;
+}
+.form-body{
+  padding: 0.7em;
+}
+.text-in-page{
+  color: black;
+  background-color: transparent;
+}
+.anchors{
+  color: blue;
+}

@@ -1,0 +1,142 @@
+// Place all the styles related to the homepage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+$dark-color: #025DA3;
+$light-color:#63b7f7;
+$alpha: 0.8;
+
+
+.background-container{
+  position: relative;
+  padding: 0;
+}
+.background-image{
+  width: 100%;
+}
+.box-container{
+  position: absolute;
+  background: rgba($dark-color,$alpha);
+  padding: 3em;
+  top: 12%;
+  right: 16px;
+  width: 40%;
+}
+.box-content{
+  border: 5px solid $light-color;
+  padding: 2em;
+  text-align: center;
+  background-color: rgba($light-color ,0.2);
+}
+.paragraph-content{
+  color: white;
+}
+.button-content{
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+}
+// Small Iphones
+@media only screen and (max-width: 400px) {
+  h4,p,button{
+    font-size: 4px;
+  }
+  .background-container{
+    padding: 0;
+  }
+  .background-image{
+    height: 700px;
+  }
+  .box-container{
+    width: 300px;
+    padding: 0;
+    top: 4px;
+    right: 4px;
+  }
+  .box-content{
+    border: 1px solid $light-color;
+    padding: 0;
+  }
+  .display-4{
+    font-size: 1.7em;
+  }
+  .paragraph-content{
+    font-size:1.2em;
+  }
+  .button-content{
+    font-size: 1.3em;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .background-container{
+    padding: 0;
+  }
+  .background-image{
+    height: 700px;
+  }
+  .box-container{
+    width: 300px;
+    padding: 0.3em;
+  }
+  .box-content{
+    border: 2px solid $light-color;
+    padding: 0.5em;
+  }
+  .display-4{
+    font-size: 1em;
+  }
+  .paragraph-content{
+    font-size:0.6em;
+  }
+}
+
+//Tablets
+@media screen and (max-width: 800px) {
+  .background-container{
+    padding: 0;
+  }
+  .background-image{
+    height: 1280px;
+  }
+  .box-container{
+    width: 400px;
+    padding: 1em;
+  }
+  .box-content{
+    border: 4px solid $light-color;
+    padding: 0.5em;
+  }
+  .display-4{
+    font-size: 3em;
+  }
+  .paragraph-content{
+    font-size:1em;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .background-container{
+    padding: 0;
+  }
+  .background-image{
+    height: 800px;
+  }
+  .box-container{
+    width: 500px;
+    padding: 1em;
+  }
+  .box-content{
+    border: 4px solid $light-color;
+    padding: 0.5em;
+  }
+  .display-4{
+    font-size: 3em;
+  }
+  .paragraph-content{
+    font-size:1.6em;
+  }
+  .button-content{
+    font-size: 1.8em;
+  }
+}

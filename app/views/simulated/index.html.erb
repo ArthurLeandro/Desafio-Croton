@@ -1,0 +1,35 @@
+<div class="simulated-container">
+  <div class="card-content ">
+  <% @simulated.each do |sim| %>
+    <div class="card">
+      <div class="card-body">
+        <h6 class="card-title h-title">Simulado <%=sim.id%></h6>
+      <div class="divider"></div>
+        <div class="card-text card-text-content">
+          <div class="d-flex align-items-start">
+            Vezes que o Simulado foi feito: <%=sim.amount_taken%>
+          </div>
+          <div class="d-flex align-items-end">
+          <%#!  !Criar um helper que auxilia nessa lógica de percentual!   %>
+          <%if sim.amount_correct_answers!=0 && sim.amount_taken!=0%>
+            Percentual de acerto: <%=(sim.amount_correct_answers.to_f/sim.amount_taken)*100%>%
+          <%else%>
+            Percentual de acerto:  0.0%
+          <% end %> 
+          
+          </div>
+          <div class="d-flex align-items-start">
+            Vezes que o Simulado foi acertado: <%=sim.amount_correct_answers%>
+          </div>    
+        </div>
+      <div class="divider"></div>
+        <%if (Undergraduate.last().isAble)%>
+        <a href="/simulated/<%=sim.id%>/edit" class="btn btn-primary">Fazer este Simulado</a>
+        <%else%>
+          <%= render 'dissable_button'%>
+        <% end %>
+      </div>      
+    <% end %>
+    </div>
+  </div>
+</div>
